@@ -7,7 +7,7 @@ import ttkbootstrap as tb
 
 root = tb.Window(themename="cosmo")
 root.title("Winevent")
-root.geometry("600x700")
+root.geometry("1300x950")
 notebook = tb.Notebook(root)
 infoframe = tb.Frame(root)
 toolsframe = tb.Frame(root)
@@ -45,7 +45,8 @@ infotext = [
     f"处理器架构：{Main_calculate.processor_acchitecture()}",
     f"主板序列号：{Main_calculate.mainboard_n()}",
     f"Bios序列号：{Main_calculate.bios_n()}",
-    f"硬盘序列号：{Main_calculate.hard_n()}"
+    f"硬盘序列号：{Main_calculate.hard_n()}",
+    f"声卡名称：{Main_calculate.sound_card()}"
 ]
 # 工具标签要显示的按钮文本
 toolstext = ["版本", "关闭休眠文件", "开发软件"]
