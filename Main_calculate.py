@@ -7,7 +7,6 @@ from tkinter import messagebox, Tk, ttk
 import requests
 import os
 
-
 w = wmi.WMI()
 
 # 获取Windows版本号，如10.0.26100
@@ -45,6 +44,10 @@ def bios_n():
 # 获取硬盘序列号，如38TG_2ISE_20QQ_02DE
 def hard_n():
     return ''.join(hardn.SerialNumber for hardn in w.Win32_DiskDrive())
+
+# 获取声卡名称,如Intel(R)适用于Windows的OKOKOK声卡(C)
+def sound_card():
+    return ''.join(soundcard.Name for soundcard in w.Win32_SoundDevice())
 
 def vermessage():
     messagebox.showinfo(title="版本", message="版本v1.1.4。")
